@@ -6,8 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Status from './components/Status/Status'
 import StatusViewer from './components/Status/StatusViewer';
-import { Provider } from "react-redux";
-import store from './Redux/store'
+// import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
   {
@@ -26,12 +25,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-  
     <RouterProvider router={router}>
-      <Provider store={store}>
       <App />
-      </Provider>
-    
     </RouterProvider>
   </React.StrictMode>
 );

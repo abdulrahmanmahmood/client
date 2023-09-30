@@ -3,35 +3,26 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import Status from './components/Status/Status'
-import StatusViewer from './components/Status/StatusViewer';
-import { Provider } from "react-redux";
-import store from './Redux/store'
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>,
+    element: <div>Hello world!</div>,
   },
   {
     path: "/status",
-    element: <Status/>,
+    element: <div>Hello world!</div>,
   },
   {
-    path: "/status/:userId",
-    element: <StatusViewer/>,
+    path: "/status/:userIdnpm install -D tailwindcss
+    ",
+    element: <div>Hello world!</div>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-  
     <RouterProvider router={router}>
-      <Provider store={store}>
       <App />
-      </Provider>
-    
     </RouterProvider>
   </React.StrictMode>
 );

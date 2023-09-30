@@ -4,11 +4,7 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/HomePage";
-import Status from './components/Status/Status'
-import StatusViewer from './components/Status/StatusViewer';
-import { Provider } from "react-redux";
-import store from './Redux/store'
-
+import Status from './components/Status/'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,18 +16,14 @@ const router = createBrowserRouter([
   },
   {
     path: "/status/:userId",
-    element: <StatusViewer/>,
+    element: <div>Hello world!</div>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-  
     <RouterProvider router={router}>
-      <Provider store={store}>
       <App />
-      </Provider>
-    
     </RouterProvider>
   </React.StrictMode>
 );

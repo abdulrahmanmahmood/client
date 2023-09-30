@@ -28,10 +28,8 @@ root.render(
   <React.StrictMode>
   
     <RouterProvider router={router}>
-      <Provider store={store}>
+      <Provider
       <App />
-      </Provider>
-    
     </RouterProvider>
   </React.StrictMode>
 );
